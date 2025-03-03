@@ -1,0 +1,120 @@
+.navbar {
+    background-color: white;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+   /* position: fixed; */
+    z-index: 1000;
+    /* background-color: white; */
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 20px; /* Adds space below */
+  }
+  
+  
+  /* Adjust font size for small screens */
+  @media (max-width: 600px) {
+    .navbar h1 {
+      font-size: 18px;
+    }
+  }
+  
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 🌟 Logo */
+  .logo {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* 🌟 Navbar Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #FFD700;
+  }
+  
+  /* 🌟 Underline Animation */
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFD700;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* 🌟 Mobile Menu Icon */
+  .menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  
+  /* 🌟 Responsive Design */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #2196F3;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .nav-links.active {
+      transform: translateY(0);
+    }
+  
+    .nav-links li {
+      padding: 15px 0;
+    }
+  }
+  
